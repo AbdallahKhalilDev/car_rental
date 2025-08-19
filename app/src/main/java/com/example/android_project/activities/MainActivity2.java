@@ -1,10 +1,9 @@
-package com.example.android_project;
+package com.example.android_project.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
@@ -13,38 +12,37 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class MainActivity extends AppCompatActivity {
+import com.example.android_project.R;
+
+public class MainActivity2 extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main2);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-        ImageView logo= findViewById(R.id.logo);
-        TextView welcome= findViewById(R.id.text);
-        TextView disc= findViewById(R.id.text2);
-        Button signup_btn= findViewById(R.id.btn_signup);
-        Button login_btn= findViewById(R.id.btn_login);
+        TextView login= findViewById(R.id.login);
+        Button start= findViewById(R.id.get_started);
 
-        signup_btn.setOnClickListener(new View.OnClickListener() {
+        login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(MainActivity.this,MainActivity2.class);
-                startActivity(i);
-            }
-        });
-        login_btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(MainActivity.this,MainActivity3.class);
+                Intent i = new Intent(MainActivity2.this,MainActivity3.class);
                 startActivity(i);
             }
         });
 
+        start.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(MainActivity2.this,MainActivity4.class);
+                startActivity(i);
+            }
+        });
     }
 }

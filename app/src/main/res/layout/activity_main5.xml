@@ -4,6 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+
+
     <ImageView
         android:id="@+id/logo_2"
         android:layout_width="150dp"
@@ -14,13 +16,13 @@
         android:src="@drawable/logo" />
 
     <TextView
-        android:id="@+id/home"
+        android:id="@+id/avl_cars"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/logo_2"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="16dp"
-        android:text="@string/home"
+        android:text="@string/avl_cars"
         android:textSize="50sp"
         android:textStyle="bold"
         android:textColor="@color/blue"
@@ -30,7 +32,7 @@
         android:id="@+id/listings_container"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/home"
+        android:layout_below="@id/avl_cars"
         android:orientation="vertical"
         android:padding="16dp">
 
@@ -159,4 +161,8 @@
         </LinearLayout>
 
     </LinearLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/fm"/>
 </RelativeLayout>

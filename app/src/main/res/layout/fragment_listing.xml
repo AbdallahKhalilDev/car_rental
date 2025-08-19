@@ -1,0 +1,187 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="fragments.ListingFragment"
+    android:background="@drawable/bg_two_color_gradient"
+    android:fitsSystemWindows="true">
+
+    <!-- TODO: Update blank fragment layout -->
+    <ImageView
+        android:id="@+id/logo_2"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_alignParentTop="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/logo" />
+
+    <TextView
+        android:id="@+id/txt_listing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/logo_2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:text="@string/merc"
+        android:textColor="@color/blue"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif-condensed-medium" />
+
+    <ImageView
+        android:id="@+id/car_image"
+        android:layout_width="300dp"
+        android:layout_height="180dp"
+        android:layout_below="@id/txt_listing"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:scaleType="centerInside"
+        android:src="@drawable/e450" />
+
+    <RelativeLayout
+        android:id="@+id/details_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/car_image"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/price_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/price_lbl"
+            android:textSize="18sp"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/price_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/price_label"
+            android:layout_alignBaseline="@id/price_label"
+            android:layout_marginStart="8dp"
+            android:text="@string/merc_price"
+            android:textSize="18sp"
+            android:textColor="@color/yellow"/>
+
+        <TextView
+            android:id="@+id/engine_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/price_label"
+            android:layout_marginTop="12dp"
+            android:text="@string/engine_lbl"
+            android:textSize="18sp"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/engine_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/engine_label"
+            android:layout_alignBaseline="@id/engine_label"
+            android:layout_marginStart="8dp"
+            android:text="@string/engine_merc"
+            android:textSize="18sp"
+            android:textColor="@color/yellow"/>
+
+        <TextView
+            android:id="@+id/horsepower_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/engine_label"
+            android:layout_marginTop="12dp"
+            android:text="@string/horsepower_lbl"
+            android:textSize="18sp"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/horsepower_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/horsepower_label"
+            android:layout_alignBaseline="@id/horsepower_label"
+            android:layout_marginStart="8dp"
+            android:text="@string/merc_hp"
+            android:textSize="18sp"
+            android:textColor="@color/yellow"/>
+
+        <TextView
+            android:id="@+id/transmission_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/horsepower_label"
+            android:layout_marginTop="12dp"
+            android:text="@string/transmission_lbl"
+            android:textSize="18sp"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/transmission_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/transmission_label"
+            android:layout_alignBaseline="@id/transmission_label"
+            android:layout_marginStart="8dp"
+            android:text="@string/merc_transmission"
+            android:textSize="18sp"
+            android:textColor="@color/yellow"/>
+
+        <TextView
+            android:id="@+id/seats_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/transmission_label"
+            android:layout_marginTop="12dp"
+            android:text="@string/seats_lbl"
+            android:textSize="18sp"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/seats_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/seats_label"
+            android:layout_alignBaseline="@id/seats_label"
+            android:layout_marginStart="8dp"
+            android:text="5"
+            android:textSize="18sp"
+            android:textColor="@color/yellow"/>
+
+        <TextView
+            android:id="@+id/features_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/seats_label"
+            android:layout_marginTop="12dp"
+            android:text="@string/features_lbl"
+            android:textSize="18sp"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/features_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/features_label"
+            android:layout_alignBaseline="@id/features_label"
+            android:layout_marginStart="8dp"
+            android:text="@string/merc_features"
+            android:textSize="18sp"
+            android:textColor="@color/yellow"/>
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/book_now"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/details_container"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:text="@string/book_now"
+        android:textSize="20sp"
+        android:textColor="@color/yellow"
+        android:background="@drawable/btn_bg"
+        android:paddingHorizontal="30dp"
+        android:paddingVertical="10dp" />
+
+</RelativeLayout>
