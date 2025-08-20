@@ -4,8 +4,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-
-
     <ImageView
         android:id="@+id/logo_2"
         android:layout_width="150dp"
@@ -28,139 +26,17 @@
         android:textColor="@color/blue"
         android:fontFamily="sans-serif-condensed-medium" />
 
-    <LinearLayout
-        android:id="@+id/listings_container"
+    <!-- ListView showing the listings -->
+    <ListView
+        android:id="@+id/listView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/avl_cars"
-        android:orientation="vertical"
-        android:padding="16dp">
+        android:divider="@android:color/transparent"
+        android:dividerHeight="12dp"
+        android:padding="16dp" />
 
-        <LinearLayout
-            android:id="@+id/listing1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:padding="12dp"
-            android:layout_marginBottom="16dp"
-            android:background="@drawable/listing_bg">
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/listing1_name"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/merc"
-                    android:textSize="20sp"
-                    android:textStyle="bold|italic"
-                    android:textColor="@color/blue" />
-
-                <TextView
-                    android:id="@+id/listing1_price"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:text="@string/merc_price"
-                    android:textSize="18sp"
-                    android:textColor="@color/blue" />
-            </LinearLayout>
-
-            <ImageView
-                android:id="@+id/listing1_image"
-                android:layout_width="140dp"
-                android:layout_height="140dp"
-                android:scaleType="centerInside"
-                android:src="@drawable/e450" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/listing2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:padding="12dp"
-            android:layout_marginBottom="16dp"
-            android:background="@drawable/listing_bg">
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/listing2_name"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/audi"
-                    android:textSize="20sp"
-                    android:textStyle="bold|italic"
-                    android:textColor="@color/blue" />
-
-                <TextView
-                    android:id="@+id/listing2_price"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:text="@string/audi_price"
-                    android:textSize="18sp"
-                    android:textColor="@color/blue" />
-            </LinearLayout>
-
-            <ImageView
-                android:id="@+id/listing2_image"
-                android:layout_width="140dp"
-                android:layout_height="140dp"
-                android:scaleType="centerInside"
-                android:src="@drawable/q5" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/listing3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:padding="12dp"
-            android:background="@drawable/listing_bg">
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/listing3_name"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/porsche"
-                    android:textSize="20sp"
-                    android:textStyle="bold|italic"
-                    android:textColor="@color/blue" />
-
-                <TextView
-                    android:id="@+id/listing3_price"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:text="@string/porsche_price"
-                    android:textSize="18sp"
-                    android:textColor="@color/blue" />
-            </LinearLayout>
-            <ImageView
-                android:id="@+id/listing3_image"
-                android:layout_width="140dp"
-                android:layout_height="140dp"
-                android:scaleType="centerInside"
-                android:src="@drawable/turbo_s" />
-        </LinearLayout>
-
-    </LinearLayout>
+    <!-- Fragment container (kept from your original) -->
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"

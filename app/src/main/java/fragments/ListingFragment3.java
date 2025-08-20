@@ -7,6 +7,8 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.Toast;
 
 import com.example.android_project.R;
 
@@ -22,9 +24,18 @@ public class ListingFragment3 extends Fragment {
 
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_listing3, container, false);
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        View root = inflater.inflate(R.layout.fragment_listing3, container, false);
+        root.setClickable(true);
+        root.setFocusable(true);
+        root.setFocusableInTouchMode(true);
+        Button book_now= root.findViewById(R.id.book_now);
+        book_now.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getContext(), R.string.booked_tst, Toast.LENGTH_SHORT).show();
+            }
+        });
+        return root;
     }
 }
