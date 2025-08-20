@@ -26,7 +26,6 @@
         android:textColor="@color/blue"
         android:fontFamily="sans-serif-condensed-medium" />
 
-    <!-- ListView showing the listings -->
     <ListView
         android:id="@+id/listView"
         android:layout_width="match_parent"
@@ -36,7 +35,6 @@
         android:dividerHeight="12dp"
         android:padding="16dp" />
 
-    <!-- Fragment container (kept from your original) -->
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
