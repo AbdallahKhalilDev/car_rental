@@ -8,6 +8,7 @@ import android.widget.ListView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
@@ -51,7 +52,7 @@ public class MainActivity5 extends AppCompatActivity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                androidx.fragment.app.Fragment frag = null;
+                Fragment frag = null;
                 switch (position) {
                     case 0:
                         frag = new ListingFragment();

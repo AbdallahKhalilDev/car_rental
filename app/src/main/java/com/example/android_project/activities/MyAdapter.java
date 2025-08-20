@@ -8,6 +8,8 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.android_project.R;
+
 public class MyAdapter extends BaseAdapter {
     private Context context;
     private int[] images;
@@ -41,9 +43,9 @@ public class MyAdapter extends BaseAdapter {
         View row = LayoutInflater.from(context).inflate(
                 com.example.android_project.R.layout.list_item, parent, false);
 
-        TextView name = row.findViewById(com.example.android_project.R.id.item_name);
-        TextView price = row.findViewById(com.example.android_project.R.id.item_price);
-        ImageView image = row.findViewById(com.example.android_project.R.id.item_image);
+        TextView name = row.findViewById(R.id.item_name);
+        TextView price = row.findViewById(R.id.item_price);
+        ImageView image = row.findViewById(R.id.item_image);
 
         name.setText(names[position]);
         price.setText(prices[position]);
