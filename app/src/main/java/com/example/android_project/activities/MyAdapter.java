@@ -38,16 +38,13 @@ public class MyAdapter extends BaseAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        // Always inflate a new row
         View row = LayoutInflater.from(context).inflate(
                 com.example.android_project.R.layout.list_item, parent, false);
 
-        // Find views directly
         TextView name = row.findViewById(com.example.android_project.R.id.item_name);
         TextView price = row.findViewById(com.example.android_project.R.id.item_price);
         ImageView image = row.findViewById(com.example.android_project.R.id.item_image);
 
-        // Set the data
         name.setText(names[position]);
         price.setText(prices[position]);
         image.setImageResource(images[position]);

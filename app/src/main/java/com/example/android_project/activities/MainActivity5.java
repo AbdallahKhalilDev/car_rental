@@ -24,10 +24,8 @@ public class MainActivity5 extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main5);
 
-        // keep fragment container as before (you replace this when clicking)
         FrameLayout fm = findViewById(R.id.fm);
 
-        // simple arrays (no model)
         int[] images = new int[] {
                 R.drawable.e450,
                 R.drawable.q5,
@@ -50,7 +48,6 @@ public class MainActivity5 extends AppCompatActivity {
         MyAdapter adapter = new MyAdapter(this, images, names, prices);
         listView.setAdapter(adapter);
 
-        // open corresponding fragment by position (0 -> ListingFragment, 1 -> ListingFragment2, 2 -> ListingFragment3)
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -66,7 +63,6 @@ public class MainActivity5 extends AppCompatActivity {
                         frag = new ListingFragment3();
                         break;
                     default:
-                        // If you later add more items, handle them here
                         break;
                 }
                 if (frag != null) openFragment(frag);
