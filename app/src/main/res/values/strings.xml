@@ -39,6 +39,7 @@
     <string name="merc_price">300$</string>
     <string name="audi_price">230$</string>
     <string name="porsche_price">550$</string>
+    <string name="price_usd">%1$s$</string>
     <string name="engine_lbl">Engine:</string>
     <string name="price_lbl">Price per day:</string>
     <string name="engine_merc">3.0L Inline-6 Turbo</string>
