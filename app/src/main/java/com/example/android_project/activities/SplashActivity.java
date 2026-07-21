@@ -6,6 +6,7 @@ import android.os.Handler;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.android_project.R;
+import com.example.android_project.data.local.DatabaseHelper;
 
 public class SplashActivity extends AppCompatActivity {
 
@@ -13,6 +14,10 @@ public class SplashActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
+
+        // first launch creates and seeds the database; doing it here spends the splash delay on it
+        DatabaseHelper.getInstance(this).getReadableDatabase();
+
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
