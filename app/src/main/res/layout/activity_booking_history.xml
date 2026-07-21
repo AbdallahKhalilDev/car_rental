@@ -1,0 +1,49 @@
+<RelativeLayout
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView
+        android:id="@+id/logo_2"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_alignParentTop="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/logo" />
+    <TextView
+        android:id="@+id/txt_history"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="@string/history"
+        android:textColor="@color/blue"
+        android:textSize="50sp"
+        android:textStyle="bold"
+        android:layout_below="@id/logo_2"
+        android:layout_centerInParent="true"
+        />
+    <TextView
+        android:id="@+id/msg1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/no_history_msg"
+        android:textSize="22sp"
+        android:layout_below="@id/txt_history"
+        android:textColor="@color/red"
+        android:paddingHorizontal="30dp"
+        android:paddingVertical="30dp"
+
+        />
+    <TextView
+        android:id="@+id/msg2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/no_history_msg2"
+        android:textSize="20sp"
+        android:layout_below="@id/msg1"
+        android:textColor="@color/black"
+        android:paddingHorizontal="30dp"
+        android:paddingVertical="10dp"
+        />
+
+</RelativeLayout>
