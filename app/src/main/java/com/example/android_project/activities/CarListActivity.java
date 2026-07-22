@@ -5,17 +5,18 @@ import android.os.Bundle;
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.android_project.R;
 import com.example.android_project.adapters.CarAdapter;
-import com.example.android_project.data.repository.CarRepository;
 import com.example.android_project.fragments.ListingFragment;
 import com.example.android_project.fragments.ListingFragment2;
 import com.example.android_project.fragments.ListingFragment3;
 import com.example.android_project.fragments.ListingFragment4;
 import com.example.android_project.model.Car;
+import com.example.android_project.viewmodel.CarListViewModel;
 
 public class CarListActivity extends AppCompatActivity implements CarAdapter.OnCarClickListener {
 
@@ -31,7 +32,8 @@ public class CarListActivity extends AppCompatActivity implements CarAdapter.OnC
         CarAdapter adapter = new CarAdapter(this, this);
         carList.setAdapter(adapter);
 
-        new CarRepository(this).getAllCars(adapter::setCars);
+        CarListViewModel viewModel = new ViewModelProvider(this).get(CarListViewModel.class);
+        viewModel.getCars().observe(this, adapter::setCars);
     }
 
     @Override
