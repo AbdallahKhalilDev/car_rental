@@ -10,10 +10,11 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.android_project.R;
 import com.example.android_project.adapters.CarAdapter;
+import com.example.android_project.data.repository.CarRepository;
 import com.example.android_project.fragments.ListingFragment;
 import com.example.android_project.fragments.ListingFragment2;
 import com.example.android_project.fragments.ListingFragment3;
-import com.example.android_project.helpers.SampleData;
+import com.example.android_project.fragments.ListingFragment4;
 import com.example.android_project.model.Car;
 
 public class CarListActivity extends AppCompatActivity implements CarAdapter.OnCarClickListener {
@@ -29,7 +30,8 @@ public class CarListActivity extends AppCompatActivity implements CarAdapter.OnC
 
         CarAdapter adapter = new CarAdapter(this, this);
         carList.setAdapter(adapter);
-        adapter.setCars(SampleData.getCars(this));
+
+        new CarRepository(this).getAllCars(adapter::setCars);
     }
 
     @Override
@@ -44,6 +46,9 @@ public class CarListActivity extends AppCompatActivity implements CarAdapter.OnC
                 break;
             case 3:
                 fragment = new ListingFragment3();
+                break;
+            case 4:
+                fragment = new ListingFragment4();
                 break;
             default:
                 return;
