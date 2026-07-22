@@ -1,0 +1,50 @@
+<resources>
+    <!-- car names and specs are deliberately absent: the cars table holds English literals and is
+         the source of truth, so those keys fall back to values/strings.xml -->
+    <string name="welcome">مرحباً بك في تأجير السيارات</string>
+    <string name="text">استأجر من تشكيلة واسعة من السيارات</string>
+    <string name="text2">متوفرة في أي مكان وفي أي وقت</string>
+    <string name="start">ابدأ الآن</string>
+    <string name="sign_up">إنشاء حساب</string>
+    <string name="name">الاسم</string>
+    <string name="email">البريد الإلكتروني</string>
+    <string name="password">كلمة المرور</string>
+    <string name="cnf_password">تأكيد كلمة المرور</string>
+    <string name="phone">رقم الهاتف</string>
+    <string name="login_q">لديك حساب بالفعل؟</string>
+    <string name="login">تسجيل الدخول</string>
+    <string name="signup_q">ليس لديك حساب؟</string>
+    <string name="home">الرئيسية</string>
+    <string name="avl_cars">السيارات المتاحة</string>
+    <string name="history">السجل</string>
+    <string name="profile">الملف الشخصي</string>
+    <string name="settings">الإعدادات</string>
+    <string name="about_us">من نحن</string>
+    <string name="contact_us">اتصل بنا</string>
+    <string name="no_history_msg">عذراً، لا توجد سجلات متاحة حالياً.</string>
+    <string name="no_history_msg2">ستظهر السجلات عند استئجارك لسيارة.</string>
+    <string name="lang">اللغة</string>
+    <string name="Eng">الإنجليزية</string>
+    <string name="Arabic">العربية</string>
+    <string name="Theme">المظهر</string>
+    <string name="Dark">الوضع الداكن</string>
+    <string name="Light">الوضع الفاتح</string>
+    <string name="currency">العملة</string>
+    <string name="usd">الدولار الأمريكي</string>
+    <string name="nis">الشيكل</string>
+    <string name="save">حفظ</string>
+    <string name="settings_saved">تم حفظ الإعدادات.</string>
+    <string name="about_us_txt">تطبيق تأجير السيارات من إعداد: </string>
+    <string name="college">الكلية التقنية – فلسطين</string>
+    <string name="engine_lbl">المحرك:</string>
+    <string name="price_lbl">السعر لليوم:</string>
+    <string name="horsepower_lbl">القدرة الحصانية:</string>
+    <string name="transmission_lbl">ناقل الحركة:</string>
+    <string name="seats_lbl">المقاعد:</string>
+    <string name="features_lbl">المميزات:</string>
+    <string name="book_now">احجز الآن</string>
+    <string name="pg_nt_avl_toast">عذراً، الصفحة غير متاحة حالياً.</string>
+    <string name="booked_tst">تم حجز السيارة بنجاح.</string>
+    <string name="abdullah">عبدالله خليل:</string>
+    <string name="hamouda">حمودة البلبيسي:</string>
+</resources>

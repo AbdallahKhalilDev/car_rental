@@ -3,14 +3,13 @@ package com.example.android_project.activities;
 import android.os.Bundle;
 
 import androidx.activity.EdgeToEdge;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.example.android_project.R;
 
-public class ContactUsActivity extends AppCompatActivity {
+public class ContactUsActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

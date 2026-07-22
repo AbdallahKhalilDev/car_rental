@@ -28,6 +28,11 @@
     <string name="Theme">Theme</string>
     <string name="Dark">Dark Mode</string>
     <string name="Light">Light Mode</string>
+    <string name="currency">Currency</string>
+    <string name="usd">US Dollar</string>
+    <string name="nis">Israeli Shekel</string>
+    <string name="save">Save</string>
+    <string name="settings_saved">Settings saved.</string>
     <string name="about_us_txt">Car Rental app created by: </string>
     <string name="names">Abdullah Khalil and Hamouda Al-Belbasy</string>
     <string name="college">Palestine Technical College</string>

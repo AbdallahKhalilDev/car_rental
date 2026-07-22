@@ -7,14 +7,13 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.example.android_project.R;
 
-public class HomeActivity extends AppCompatActivity {
+public class HomeActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,7 +52,8 @@ public class HomeActivity extends AppCompatActivity {
         profile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), R.string.pg_nt_avl_toast, Toast.LENGTH_SHORT).show();
+                // the application context keeps the system locale, so it would ignore the saved language
+                Toast.makeText(HomeActivity.this, R.string.pg_nt_avl_toast, Toast.LENGTH_SHORT).show();
             }
         });
 

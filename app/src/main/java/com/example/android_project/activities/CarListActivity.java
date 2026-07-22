@@ -3,7 +3,6 @@ package com.example.android_project.activities;
 import android.os.Bundle;
 
 import androidx.activity.EdgeToEdge;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -18,7 +17,7 @@ import com.example.android_project.fragments.ListingFragment4;
 import com.example.android_project.model.Car;
 import com.example.android_project.viewmodel.CarListViewModel;
 
-public class CarListActivity extends AppCompatActivity implements CarAdapter.OnCarClickListener {
+public class CarListActivity extends BaseActivity implements CarAdapter.OnCarClickListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
