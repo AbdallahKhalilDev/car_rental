@@ -8,6 +8,9 @@ import android.os.Handler;
 import com.example.android_project.R;
 import com.example.android_project.data.local.DatabaseHelper;
 import com.example.android_project.helpers.AppExecutors;
+import com.example.android_project.helpers.SessionManager;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class SplashActivity extends BaseActivity {
 
@@ -24,7 +27,11 @@ public class SplashActivity extends BaseActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent i = new Intent(SplashActivity.this, WelcomeActivity.class);
+                FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
+                boolean signedIn = currentUser != null
+                        && new SessionManager(SplashActivity.this).isLoggedIn();
+                Class<?> next = signedIn ? HomeActivity.class : WelcomeActivity.class;
+                Intent i = new Intent(SplashActivity.this, next);
                 startActivity(i);
                 finish();
             }

@@ -70,7 +70,6 @@
     <string name="porsche_features">Leather, Park Assist, rear-axle steering, 360 Camera, Adaptive Cruise Control, Front Axle Lift System</string>
     <string name="ferrari_features">Carbon Fiber Interior, Launch Control, Side Slip Angle Control, 360 Camera, Adaptive Suspension</string>
     <string name="book_now">Book Now</string>
-    <string name="pg_nt_avl_toast">Sorry, Page is not available At the moment.</string>
     <string name="booked_tst">Car Booked Successfully.</string>
     <string name="email_val2">agany601@gmail.com</string>
     <string name="phone_val2">0597294250</string>
@@ -79,4 +78,17 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
+    <string name="logout">Log Out</string>
+    <string name="logged_out">Logged out.</string>
+    <string name="profile_saved">Profile saved.</string>
+    <string name="signup_success">Account created successfully.</string>
+    <string name="login_success">Logged in successfully.</string>
+    <string name="err_fill_all">Please fill in all fields.</string>
+    <string name="err_email_invalid">Please enter a valid email address.</string>
+    <string name="err_password_short">Password must be at least 6 characters.</string>
+    <string name="err_password_mismatch">Passwords do not match.</string>
+    <string name="err_email_in_use">That email is already registered.</string>
+    <string name="err_wrong_credentials">Wrong email or password.</string>
+    <string name="err_no_account">No account found for that email.</string>
+    <string name="auth_failed">Authentication failed. Check your connection and try again.</string>
 </resources>

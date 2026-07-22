@@ -43,8 +43,20 @@
     <string name="seats_lbl">المقاعد:</string>
     <string name="features_lbl">المميزات:</string>
     <string name="book_now">احجز الآن</string>
-    <string name="pg_nt_avl_toast">عذراً، الصفحة غير متاحة حالياً.</string>
     <string name="booked_tst">تم حجز السيارة بنجاح.</string>
     <string name="abdullah">عبدالله خليل:</string>
     <string name="hamouda">حمودة البلبيسي:</string>
+    <string name="logout">تسجيل الخروج</string>
+    <string name="logged_out">تم تسجيل الخروج.</string>
+    <string name="profile_saved">تم حفظ الملف الشخصي.</string>
+    <string name="signup_success">تم إنشاء الحساب بنجاح.</string>
+    <string name="login_success">تم تسجيل الدخول بنجاح.</string>
+    <string name="err_fill_all">يرجى تعبئة جميع الحقول.</string>
+    <string name="err_email_invalid">يرجى إدخال بريد إلكتروني صالح.</string>
+    <string name="err_password_short">يجب أن تتكون كلمة المرور من 6 أحرف على الأقل.</string>
+    <string name="err_password_mismatch">كلمتا المرور غير متطابقتين.</string>
+    <string name="err_email_in_use">هذا البريد الإلكتروني مسجّل بالفعل.</string>
+    <string name="err_wrong_credentials">البريد الإلكتروني أو كلمة المرور غير صحيحة.</string>
+    <string name="err_no_account">لا يوجد حساب بهذا البريد الإلكتروني.</string>
+    <string name="auth_failed">فشلت عملية المصادقة. تحقق من اتصالك وحاول مرة أخرى.</string>
 </resources>
