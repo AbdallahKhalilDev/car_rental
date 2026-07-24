@@ -54,6 +54,9 @@ public class CarListActivity extends BaseActivity implements CarAdapter.OnCarCli
             default:
                 return;
         }
+        Bundle args = new Bundle();
+        args.putSerializable("car", car);
+        fragment.setArguments(args);
         getSupportFragmentManager()
                 .beginTransaction()
                 .replace(R.id.fm, fragment, "FULLSCREEN_FRAGMENT")

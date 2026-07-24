@@ -46,4 +46,14 @@
         android:paddingVertical="10dp"
         />
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/booking_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/txt_history"
+        android:clipToPadding="false"
+        android:paddingHorizontal="16dp"
+        android:paddingTop="8dp"
+        android:visibility="gone" />
+
 </RelativeLayout>

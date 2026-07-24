@@ -91,4 +91,16 @@
     <string name="err_wrong_credentials">Wrong email or password.</string>
     <string name="err_no_account">No account found for that email.</string>
     <string name="auth_failed">Authentication failed. Check your connection and try again.</string>
+    <string name="start_date">Start date</string>
+    <string name="end_date">End date</string>
+    <string name="pick_date">Tap to pick a date</string>
+    <string name="booking_total">Total: %1$s$</string>
+    <string name="booking_dates">%1$s → %2$s</string>
+    <string name="err_pick_dates">Please choose both dates.</string>
+    <string name="err_end_before_start">End date must be on or after the start date.</string>
+    <string name="cancel">Cancel</string>
+    <string name="delete">Delete</string>
+    <string name="delete_booking_title">Delete booking?</string>
+    <string name="delete_booking_msg">Remove this booking from your history?</string>
+    <string name="booking_deleted">Booking deleted.</string>
 </resources>

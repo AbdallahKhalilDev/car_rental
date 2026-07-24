@@ -8,9 +8,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.Toast;
 
 import com.example.android_project.R;
+import com.example.android_project.helpers.BookingDialog;
+import com.example.android_project.model.Car;
 
 public class ListingFragment4 extends Fragment {
 
@@ -24,11 +25,13 @@ public class ListingFragment4 extends Fragment {
         root.setFocusable(true);
         root.setFocusableInTouchMode(true);
 
+        Bundle args = getArguments();
+        Car car = args != null ? (Car) args.getSerializable("car") : null;
+
         Button book_now = root.findViewById(R.id.book_now);
-        book_now.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(getContext(), R.string.booked_tst, Toast.LENGTH_SHORT).show();
+        book_now.setOnClickListener(v -> {
+            if (car != null) {
+                BookingDialog.show(requireContext(), car);
             }
         });
         return root;
