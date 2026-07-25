@@ -62,7 +62,7 @@
     <string name="start_date">تاريخ البداية</string>
     <string name="end_date">تاريخ النهاية</string>
     <string name="pick_date">اضغط لاختيار التاريخ</string>
-    <string name="booking_total">المجموع: %1$s$</string>
+    <string name="booking_total">المجموع: %1$s</string>
     <string name="err_pick_dates">يرجى اختيار كلا التاريخين.</string>
     <string name="err_end_before_start">يجب أن يكون تاريخ النهاية في يوم البداية أو بعده.</string>
     <string name="cancel">إلغاء</string>

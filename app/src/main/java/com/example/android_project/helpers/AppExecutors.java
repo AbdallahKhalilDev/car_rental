@@ -11,6 +11,7 @@ public final class AppExecutors {
     private static volatile AppExecutors instance;
 
     private final Executor diskIO;
+    private final Executor networkIO;
     private final Executor mainThread;
 
     public static AppExecutors getInstance() {
@@ -27,12 +28,18 @@ public final class AppExecutors {
     private AppExecutors() {
         // one thread, so two database operations can never contend for the same lock
         diskIO = Executors.newSingleThreadExecutor(r -> new Thread(r, "disk-io"));
+        // a separate thread for HTTP, so a slow network call can never stall a disk read
+        networkIO = Executors.newSingleThreadExecutor(r -> new Thread(r, "network-io"));
         Handler handler = new Handler(Looper.getMainLooper());
         mainThread = handler::post;
     }
 
     public Executor diskIO() {
         return diskIO;
+    }
+
+    public Executor networkIO() {
+        return networkIO;
     }
 
     public Executor mainThread() {

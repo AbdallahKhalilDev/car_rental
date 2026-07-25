@@ -11,11 +11,11 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.android_project.R;
+import com.example.android_project.helpers.CurrencyFormatter;
 import com.example.android_project.model.Car;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Locale;
 
 public class CarAdapter extends RecyclerView.Adapter<CarAdapter.CarViewHolder> {
 
@@ -26,6 +26,8 @@ public class CarAdapter extends RecyclerView.Adapter<CarAdapter.CarViewHolder> {
     private final Context context;
     private final OnCarClickListener listener;
     private final List<Car> cars = new ArrayList<>();
+    private String currency = "usd";
+    private double rate = 0;
 
     public CarAdapter(Context context, OnCarClickListener listener) {
         this.context = context;
@@ -37,6 +39,12 @@ public class CarAdapter extends RecyclerView.Adapter<CarAdapter.CarViewHolder> {
         if (newCars != null) {
             cars.addAll(newCars);
         }
+        notifyDataSetChanged();
+    }
+
+    public void setCurrency(String currency, double rate) {
+        this.currency = currency;
+        this.rate = rate;
         notifyDataSetChanged();
     }
 
@@ -52,8 +60,7 @@ public class CarAdapter extends RecyclerView.Adapter<CarAdapter.CarViewHolder> {
         Car car = cars.get(position);
 
         holder.name.setText(car.getName());
-        holder.price.setText(context.getString(R.string.price_usd,
-                String.format(Locale.US, "%.0f", car.getPricePerDay())));
+        holder.price.setText(CurrencyFormatter.format(context, car.getPricePerDay(), currency, rate));
         holder.image.setImageResource(car.getImageResId());
 
         holder.itemView.setOnClickListener(v -> {

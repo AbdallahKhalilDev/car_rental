@@ -14,8 +14,10 @@ import com.example.android_project.fragments.ListingFragment;
 import com.example.android_project.fragments.ListingFragment2;
 import com.example.android_project.fragments.ListingFragment3;
 import com.example.android_project.fragments.ListingFragment4;
+import com.example.android_project.helpers.CurrencyManager;
 import com.example.android_project.model.Car;
 import com.example.android_project.viewmodel.CarListViewModel;
+import com.example.android_project.viewmodel.CurrencyViewModel;
 
 public class CarListActivity extends BaseActivity implements CarAdapter.OnCarClickListener {
 
@@ -33,6 +35,11 @@ public class CarListActivity extends BaseActivity implements CarAdapter.OnCarCli
 
         CarListViewModel viewModel = new ViewModelProvider(this).get(CarListViewModel.class);
         viewModel.getCars().observe(this, adapter::setCars);
+
+        String currency = new CurrencyManager(this).getCurrency();
+        CurrencyViewModel currencyViewModel = new ViewModelProvider(this).get(CurrencyViewModel.class);
+        currencyViewModel.getRate().observe(this,
+                rate -> adapter.setCurrency(currency, rate != null ? rate : 0));
     }
 
     @Override

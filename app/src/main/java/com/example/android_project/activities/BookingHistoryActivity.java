@@ -16,8 +16,10 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.android_project.R;
 import com.example.android_project.adapters.BookingAdapter;
+import com.example.android_project.helpers.CurrencyManager;
 import com.example.android_project.model.Booking;
 import com.example.android_project.viewmodel.BookingViewModel;
+import com.example.android_project.viewmodel.CurrencyViewModel;
 
 public class BookingHistoryActivity extends BaseActivity
         implements BookingAdapter.OnBookingLongClickListener {
@@ -52,6 +54,11 @@ public class BookingHistoryActivity extends BaseActivity
             msg1.setVisibility(empty ? View.VISIBLE : View.GONE);
             msg2.setVisibility(empty ? View.VISIBLE : View.GONE);
         });
+
+        String currency = new CurrencyManager(this).getCurrency();
+        CurrencyViewModel currencyViewModel = new ViewModelProvider(this).get(CurrencyViewModel.class);
+        currencyViewModel.getRate().observe(this,
+                rate -> adapter.setCurrency(currency, rate != null ? rate : 0));
     }
 
     @Override

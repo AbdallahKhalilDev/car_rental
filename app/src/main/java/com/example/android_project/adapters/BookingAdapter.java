@@ -10,12 +10,12 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.android_project.R;
+import com.example.android_project.helpers.CurrencyFormatter;
 import com.example.android_project.model.Booking;
 import com.example.android_project.model.BookingWithCar;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Locale;
 
 public class BookingAdapter extends RecyclerView.Adapter<BookingAdapter.BookingViewHolder> {
 
@@ -26,6 +26,8 @@ public class BookingAdapter extends RecyclerView.Adapter<BookingAdapter.BookingV
     private final Context context;
     private final OnBookingLongClickListener listener;
     private final List<BookingWithCar> bookings = new ArrayList<>();
+    private String currency = "usd";
+    private double rate = 0;
 
     public BookingAdapter(Context context, OnBookingLongClickListener listener) {
         this.context = context;
@@ -37,6 +39,12 @@ public class BookingAdapter extends RecyclerView.Adapter<BookingAdapter.BookingV
         if (newBookings != null) {
             bookings.addAll(newBookings);
         }
+        notifyDataSetChanged();
+    }
+
+    public void setCurrency(String currency, double rate) {
+        this.currency = currency;
+        this.rate = rate;
         notifyDataSetChanged();
     }
 
@@ -55,8 +63,9 @@ public class BookingAdapter extends RecyclerView.Adapter<BookingAdapter.BookingV
         holder.name.setText(item.getCarName());
         holder.dates.setText(context.getString(R.string.booking_dates,
                 booking.getStartDate(), booking.getEndDate()));
+        // the stored total_price is USD; convert it for display at the current rate
         holder.total.setText(context.getString(R.string.booking_total,
-                String.format(Locale.US, "%.0f", booking.getTotalPrice())));
+                CurrencyFormatter.format(context, booking.getTotalPrice(), currency, rate)));
 
         holder.itemView.setOnLongClickListener(v -> {
             if (listener != null) {

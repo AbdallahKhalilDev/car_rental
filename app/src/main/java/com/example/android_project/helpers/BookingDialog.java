@@ -30,7 +30,7 @@ public final class BookingDialog {
     private BookingDialog() {
     }
 
-    public static void show(Context context, Car car) {
+    public static void show(Context context, Car car, String currency, double rate) {
         View root = LayoutInflater.from(context).inflate(R.layout.dialog_booking, null);
         TextView startField = root.findViewById(R.id.start_date_field);
         TextView endField = root.findViewById(R.id.end_date_field);
@@ -46,8 +46,9 @@ public final class BookingDialog {
             if (startCal[0] != null && endCal[0] != null && !endCal[0].before(startCal[0])) {
                 total = days(startCal[0], endCal[0]) * car.getPricePerDay();
             }
+            // total is USD; the shekel figure shown here is display-only — save() stores the USD one
             totalValue.setText(context.getString(R.string.booking_total,
-                    String.format(Locale.US, "%.0f", total)));
+                    CurrencyFormatter.format(context, total, currency, rate)));
         };
         updateTotal.run();
 
