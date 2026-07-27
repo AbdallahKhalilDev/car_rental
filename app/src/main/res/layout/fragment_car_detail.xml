@@ -8,9 +8,8 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:context="com.example.android_project.fragments.ListingFragment2">
+        tools:context="com.example.android_project.fragments.CarDetailFragment">
 
-        <!-- TODO: Update blank fragment layout -->
         <ImageView
             android:id="@+id/logo_2"
             android:layout_width="150dp"
@@ -26,21 +25,21 @@
             android:layout_below="@id/logo_2"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="5dp"
-            android:text="@string/audi"
             android:textColor="@color/blue"
             android:textSize="30sp"
             android:textStyle="bold"
-            android:fontFamily="sans-serif-condensed-medium" />
+            android:fontFamily="sans-serif-condensed-medium"
+            tools:text="Mercedes-Benz E450" />
 
         <ImageView
             android:id="@+id/car_image"
-            android:layout_width="280dp"
-            android:layout_height="170dp"
+            android:layout_width="300dp"
+            android:layout_height="180dp"
             android:layout_below="@id/txt_listing"
             android:layout_marginTop="20dp"
             android:layout_centerHorizontal="true"
             android:scaleType="centerInside"
-            android:src="@drawable/q5" />
+            tools:src="@drawable/e450" />
 
         <RelativeLayout
             android:id="@+id/details_container"
@@ -64,9 +63,9 @@
                 android:layout_toEndOf="@id/price_label"
                 android:layout_alignBaseline="@id/price_label"
                 android:layout_marginStart="8dp"
-                android:text="@string/audi_price"
                 android:textSize="18sp"
-                android:textColor="@color/yellow"/>
+                android:textColor="@color/yellow"
+                tools:text="300$" />
 
             <TextView
                 android:id="@+id/engine_label"
@@ -85,9 +84,9 @@
                 android:layout_toEndOf="@id/engine_label"
                 android:layout_alignBaseline="@id/engine_label"
                 android:layout_marginStart="8dp"
-                android:text="@string/engine_audi"
                 android:textSize="18sp"
-                android:textColor="@color/yellow"/>
+                android:textColor="@color/yellow"
+                tools:text="3.0L Inline-6 Turbo" />
 
             <TextView
                 android:id="@+id/horsepower_label"
@@ -106,9 +105,9 @@
                 android:layout_toEndOf="@id/horsepower_label"
                 android:layout_alignBaseline="@id/horsepower_label"
                 android:layout_marginStart="8dp"
-                android:text="@string/audi_hp"
                 android:textSize="18sp"
-                android:textColor="@color/yellow"/>
+                android:textColor="@color/yellow"
+                tools:text="402 hp" />
 
             <TextView
                 android:id="@+id/transmission_label"
@@ -127,9 +126,9 @@
                 android:layout_toEndOf="@id/transmission_label"
                 android:layout_alignBaseline="@id/transmission_label"
                 android:layout_marginStart="8dp"
-                android:text="@string/audi_transmission"
                 android:textSize="18sp"
-                android:textColor="@color/yellow"/>
+                android:textColor="@color/yellow"
+                tools:text="9-speed automatic" />
 
             <TextView
                 android:id="@+id/seats_label"
@@ -148,9 +147,9 @@
                 android:layout_toEndOf="@id/seats_label"
                 android:layout_alignBaseline="@id/seats_label"
                 android:layout_marginStart="8dp"
-                android:text="5"
                 android:textSize="18sp"
-                android:textColor="@color/yellow"/>
+                android:textColor="@color/yellow"
+                tools:text="5" />
 
             <TextView
                 android:id="@+id/features_label"
@@ -169,9 +168,9 @@
                 android:layout_toEndOf="@id/features_label"
                 android:layout_alignBaseline="@id/features_label"
                 android:layout_marginStart="8dp"
-                android:text="@string/audi_features"
                 android:textSize="18sp"
-                android:textColor="@color/yellow"/>
+                android:textColor="@color/yellow"
+                tools:text="Leather, GPS, 360 Camera, Air Suspension" />
         </RelativeLayout>
 
         <Button

@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.android_project.R;
@@ -18,16 +19,24 @@ import com.example.android_project.helpers.CurrencyManager;
 import com.example.android_project.model.Car;
 import com.example.android_project.viewmodel.CurrencyViewModel;
 
-public class ListingFragment4 extends Fragment {
+public class CarDetailFragment extends Fragment {
 
     private double rate = 0;
 
-    public ListingFragment4() {
+    public CarDetailFragment() {
+    }
+
+    public static CarDetailFragment newInstance(Car car) {
+        CarDetailFragment fragment = new CarDetailFragment();
+        Bundle args = new Bundle();
+        args.putSerializable("car", car);
+        fragment.setArguments(args);
+        return fragment;
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View root = inflater.inflate(R.layout.fragment_listing4, container, false);
+        View root = inflater.inflate(R.layout.fragment_car_detail, container, false);
         root.setClickable(true);
         root.setFocusable(true);
         root.setFocusableInTouchMode(true);
@@ -35,9 +44,17 @@ public class ListingFragment4 extends Fragment {
         Bundle args = getArguments();
         Car car = args != null ? (Car) args.getSerializable("car") : null;
 
-        TextView priceValue = root.findViewById(R.id.price_value);
         String currency = new CurrencyManager(requireContext()).getCurrency();
+        TextView priceValue = root.findViewById(R.id.price_value);
+
         if (car != null) {
+            ((TextView) root.findViewById(R.id.txt_listing)).setText(car.getName());
+            ((ImageView) root.findViewById(R.id.car_image)).setImageResource(car.getImageResId());
+            ((TextView) root.findViewById(R.id.engine_value)).setText(car.getEngine());
+            ((TextView) root.findViewById(R.id.horsepower_value)).setText(car.getHorsepower());
+            ((TextView) root.findViewById(R.id.transmission_value)).setText(car.getTransmission());
+            ((TextView) root.findViewById(R.id.seats_value)).setText(String.valueOf(car.getSeats()));
+            ((TextView) root.findViewById(R.id.features_value)).setText(car.getFeatures());
             priceValue.setText(CurrencyFormatter.format(requireContext(), car.getPricePerDay(), currency, rate));
         }
 

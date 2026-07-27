@@ -10,7 +10,7 @@ import androidx.annotation.NonNull;
 public class DatabaseHelper extends SQLiteOpenHelper {
 
     private static final String DATABASE_NAME = "car_rental.db";
-    private static final int DATABASE_VERSION = 1;
+    private static final int DATABASE_VERSION = 2;
 
     public static final String TABLE_CARS = "cars";
     public static final String CAR_ID = "id";
@@ -123,9 +123,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                     "Leather, Park Assist, rear-axle steering, 360 Camera, "
                             + "Adaptive Cruise Control, Front Axle Lift System");
             // placeholder image until a f8_tributo drawable exists
-            insertCar(db, 4, "Ferrari F8 Tributo", 800, "turbo_s",
-                    "3.9L V8 Twin-Turbo", "710 hp", "7-speed dual-clutch", 2,
-                    "Leather, Carbon Fiber Interior, Launch Control, "
+            insertCar(db, 4, "Ferrari F8 Tributo", 700, "ferrari_f8",
+                    "3.9L V8 Twin-Turbo", "720 hp", "7-speed dual-clutch", 2,
+                    "Carbon Fiber Interior, Launch Control, "
                             + "Side Slip Angle Control, 360 Camera, Adaptive Suspension");
             db.setTransactionSuccessful();
         } finally {
