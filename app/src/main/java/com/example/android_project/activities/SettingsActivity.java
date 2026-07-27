@@ -77,7 +77,6 @@ public class SettingsActivity extends BaseActivity {
 
                 languageManager.setLanguage(selectedLanguage);
 
-                // theme and currency are stored but not applied yet; sessions 8 and later read them
                 SharedPreferences.Editor editor = sharedPreferences.edit();
                 editor.putString("theme", selectedTheme);
                 editor.putString("currency", selectedCurrency);
@@ -86,7 +85,7 @@ public class SettingsActivity extends BaseActivity {
                 Toast.makeText(SettingsActivity.this, R.string.settings_saved, Toast.LENGTH_SHORT).show();
 
                 // the locale is read in attachBaseContext, so screens already on the stack keep the
-                // old one — clearing the task forces every screen to be rebuilt
+                // old one, clearing the task forces every screen to be rebuilt
                 Intent i = new Intent(SettingsActivity.this, HomeActivity.class);
                 i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(i);

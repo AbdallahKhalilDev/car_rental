@@ -5,6 +5,7 @@
     android:layout_height="wrap_content"
     android:layout_marginBottom="12dp"
     android:orientation="horizontal"
+    android:layoutDirection="ltr"
     android:padding="12dp"
     android:background="@drawable/listing_bg">
 
@@ -12,7 +13,9 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:padding="24dp"
+        >
 
         <TextView
             android:id="@+id/item_name"
@@ -21,7 +24,7 @@
             android:text="@string/merc"
             android:textSize="20sp"
             android:textStyle="bold|italic"
-            android:textColor="@color/blue"/>
+            android:textColor="@color/deep_purple"/>
 
         <TextView
             android:id="@+id/item_price"
@@ -30,13 +33,13 @@
             android:layout_marginTop="4dp"
             android:text="@string/merc_price"
             android:textSize="18sp"
-            android:textColor="@color/blue"/>
+            android:textColor="@color/green"/>
     </LinearLayout>
 
     <ImageView
         android:id="@+id/item_image"
         android:layout_width="140dp"
         android:layout_height="140dp"
-        android:scaleType="centerInside"
+        android:scaleType="fitCenter"
         android:src="@drawable/e450"/>
 </LinearLayout>

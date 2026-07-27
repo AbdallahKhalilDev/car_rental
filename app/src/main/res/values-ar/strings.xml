@@ -35,7 +35,7 @@
     <string name="save">حفظ</string>
     <string name="settings_saved">تم حفظ الإعدادات.</string>
     <string name="about_us_txt">تطبيق تأجير السيارات من إعداد: </string>
-    <string name="college">الكلية التقنية – فلسطين</string>
+    <string name="college">كلية فلسطين التقنية</string>
     <string name="engine_lbl">المحرك:</string>
     <string name="price_lbl">السعر لليوم:</string>
     <string name="horsepower_lbl">القدرة الحصانية:</string>
@@ -44,7 +44,7 @@
     <string name="features_lbl">المميزات:</string>
     <string name="book_now">احجز الآن</string>
     <string name="booked_tst">تم حجز السيارة بنجاح.</string>
-    <string name="abdullah">عبدالله خليل:</string>
+    <string name="abdallah">عبدالله خليل:</string>
     <string name="hamouda">حمودة البلبيسي:</string>
     <string name="logout">تسجيل الخروج</string>
     <string name="logged_out">تم تسجيل الخروج.</string>
@@ -70,4 +70,5 @@
     <string name="delete_booking_title">حذف الحجز؟</string>
     <string name="delete_booking_msg">إزالة هذا الحجز من السجل؟</string>
     <string name="booking_deleted">تم حذف الحجز.</string>
+    <string name="names">عبدالله خليل و حمودة البلبيسي</string>
 </resources>

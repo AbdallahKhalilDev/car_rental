@@ -29,7 +29,7 @@
         android:id="@+id/Abdullah"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/abdullah"
+        android:text="@string/abdallah"
         android:textSize="30sp"
         android:textColor="@color/purple"
         android:layout_below="@id/txt_contact_us"
@@ -44,8 +44,7 @@
         android:textColor="@color/red"
         android:textSize="20sp"
         android:layout_below="@id/Abdullah"
-        android:paddingLeft="20dp"
-        android:paddingRight="30dp"
+        android:paddingHorizontal="20dp"
         android:layout_marginBottom="30dp"
         />
     <TextView
@@ -54,7 +53,7 @@
         android:layout_height="wrap_content"
         android:text="@string/email_val1"
         android:textColor="@color/blue"
-        android:textSize="20sp"
+        android:textSize="18sp"
         android:layout_alignBaseline="@id/email_contact"
         android:layout_toEndOf="@id/email_contact"
         android:textStyle="italic|bold"
@@ -67,8 +66,7 @@
         android:textColor="@color/red"
         android:textSize="20sp"
         android:layout_below="@id/email_contact"
-        android:paddingLeft="20dp"
-        android:paddingRight="30dp"
+        android:paddingHorizontal="20dp"
         />
     <TextView
         android:id="@+id/phone_val"
@@ -101,8 +99,7 @@
         android:textColor="@color/red"
         android:textSize="20sp"
         android:layout_below="@id/Hamouda"
-        android:paddingLeft="20dp"
-        android:paddingRight="30dp"
+        android:paddingHorizontal="20dp"
         android:layout_marginBottom="30dp"
         />
     <TextView
@@ -111,7 +108,7 @@
         android:layout_height="wrap_content"
         android:text="@string/email_val2"
         android:textColor="@color/blue"
-        android:textSize="20sp"
+        android:textSize="18sp"
         android:layout_alignBaseline="@id/email_contact2"
         android:layout_toEndOf="@id/email_contact2"
         android:textStyle="italic|bold"
@@ -124,8 +121,7 @@
         android:textColor="@color/red"
         android:textSize="20sp"
         android:layout_below="@id/email_contact2"
-        android:paddingLeft="20dp"
-        android:paddingRight="30dp"
+        android:paddingHorizontal="20dp"
         />
     <TextView
         android:id="@+id/phone_val2"
@@ -138,4 +134,16 @@
         android:layout_toEndOf="@id/phone_contact2"
         android:textStyle="italic|bold"
         />
+<!--    <TextView-->
+<!--        android:id="@+id/github"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="GitHub Link"-->
+<!--        android:textColor="@color/blue_dark"-->
+<!--        android:textSize="20sp"-->
+<!--        android:layout_below="@id/phone_contact2"-->
+<!--        android:paddingLeft="20dp"-->
+<!--        android:paddingRight="20dp"-->
+<!--        />-->
+
 </RelativeLayout>

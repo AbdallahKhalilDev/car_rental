@@ -92,8 +92,8 @@ public class ProfileActivity extends BaseActivity {
         });
     }
 
-    // null when the account was created on another device: the fields stay empty and the first
-    // save inserts the missing row
+    // null when there is no local profile row yet. example: the users table was rebuilt while the
+    // Firebase session persisted; the fields stay empty and the first save inserts the row
     private void bind(User user) {
         if (user == null) {
             return;

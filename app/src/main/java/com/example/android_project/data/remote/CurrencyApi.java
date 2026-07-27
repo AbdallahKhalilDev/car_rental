@@ -11,7 +11,6 @@ import java.nio.charset.StandardCharsets;
 
 public final class CurrencyApi {
 
-    // one central place for the endpoint, in the course's "a constant per link" style
     public static final String BASE_URL = "https://open.er-api.com/v6/latest/USD";
 
     private CurrencyApi() {

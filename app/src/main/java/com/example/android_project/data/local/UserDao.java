@@ -21,8 +21,8 @@ public class UserDao {
         values.put(DatabaseHelper.USER_NAME, user.getName());
         values.put(DatabaseHelper.USER_EMAIL, user.getEmail());
         values.put(DatabaseHelper.USER_PHONE, user.getPhone());
-        // signup inserts, the profile screen updates, and an account first seen on this device
-        // after being created on another one inserts too — one call covers all three
+        // one write for three cases: signup inserts, the profile screen updates, and if the local
+        // row is missing (example the users table was rebuilt) this re-inserts it
         return helper.getWritableDatabase().insertWithOnConflict(DatabaseHelper.TABLE_USERS, null,
                 values, SQLiteDatabase.CONFLICT_REPLACE);
     }

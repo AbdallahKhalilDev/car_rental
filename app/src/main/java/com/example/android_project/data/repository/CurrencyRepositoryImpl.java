@@ -14,8 +14,7 @@ public class CurrencyRepositoryImpl implements CurrencyRepository {
 
     private static final String TAG = "CurrencyRepository";
 
-    // the API refreshes once a day, so a cached rate younger than this needs no network call —
-    // this is what keeps the free tier's rate limit at arm's length
+    // the API refreshes once a day, so a cached rate younger than this needs no network call
     private static final long MAX_AGE_MS = 24L * 60 * 60 * 1000;
 
     private final AppExecutors executors;

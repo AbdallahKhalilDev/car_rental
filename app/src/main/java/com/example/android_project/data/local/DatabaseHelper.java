@@ -10,7 +10,7 @@ import androidx.annotation.NonNull;
 public class DatabaseHelper extends SQLiteOpenHelper {
 
     private static final String DATABASE_NAME = "car_rental.db";
-    private static final int DATABASE_VERSION = 2;
+    private static final int DATABASE_VERSION = 5;
 
     public static final String TABLE_CARS = "cars";
     public static final String CAR_ID = "id";
@@ -75,7 +75,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         if (instance == null) {
             synchronized (DatabaseHelper.class) {
                 if (instance == null) {
-                    // application context — an Activity context would leak the singleton
+                    // application context , an Activity context would leak the singleton
                     instance = new DatabaseHelper(context.getApplicationContext());
                 }
             }
@@ -114,19 +114,19 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         try {
             insertCar(db, 1, "Mercedes‑Benz E450", 300, "e450",
                     "3.0L Inline-6 Turbo", "402 hp", "9-speed automatic", 5,
-                    "Leather, GPS, 360 Camera, Air Suspension");
+                    "Nappa Leather Upholstery, Ambient Lighting, 360 Camera, Air Suspension, EQ Boost");
             insertCar(db, 2, "Audi Q5", 230, "q5",
                     "2.0L Inline-4 Turbo", "201 hp", "7-speed automatic", 5,
-                    "Park Assist, GPS, 360 Camera, Adaptive Cruise Control");
+                    "Insulated Interior, Park Assist, Power Tailgate, Ambient Lighting, Adaptive Cruise Control");
             insertCar(db, 3, "Porsche 911 turbo S", 550, "turbo_s",
                     "3.7L Flat-6 Twin-Turbo", "650 hp", "8-speed PDK", 4,
-                    "Leather, Park Assist, rear-axle steering, 360 Camera, "
-                            + "Adaptive Cruise Control, Front Axle Lift System");
-            // placeholder image until a f8_tributo drawable exists
+                    "Leather Upholstery, Rear Axle Steering, Surround-View Camera, Adaptive Cruise Control, Adaptive Damping System,Front Axle Lift System ");
             insertCar(db, 4, "Ferrari F8 Tributo", 700, "ferrari_f8",
                     "3.9L V8 Twin-Turbo", "720 hp", "7-speed dual-clutch", 2,
-                    "Carbon Fiber Interior, Launch Control, "
-                            + "Side Slip Angle Control, 360 Camera, Adaptive Suspension");
+                    "Carbon Ceramic Brakes, Launch Control, Side Slip Angle Control,Front Axle Lift System ,Parking Sensors, Adaptive Suspension");
+            insertCar(db, 5, "BMW M3 Competition", 360, "bmw_m3",
+                    "3.0L Twin-Turbo Inline-6", "530 hp", "8-speed M Steptronic", 5,
+                    "Adaptive M Suspension, Carbon Fiber Bucket Seats, Carbon Fiber Roof, Park Assist, 360 Camera");
             db.setTransactionSuccessful();
         } finally {
             db.endTransaction();

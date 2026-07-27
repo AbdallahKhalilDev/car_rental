@@ -11,8 +11,7 @@ public final class AuthErrors {
     private AuthErrors() {
     }
 
-    // Firebase exception messages are English-only and phrased for developers, so they are
-    // mapped to string resources instead of being shown to the user
+
     public static int messageFor(Exception exception) {
         // subclass of FirebaseAuthInvalidCredentialsException, so it has to be tested first
         if (exception instanceof FirebaseAuthWeakPasswordException) {
